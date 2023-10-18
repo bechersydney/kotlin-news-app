@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sample.newsapp.R
 import com.sample.newsapp.adapters.NewsAdapter
@@ -35,6 +36,12 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
         viewModel = (activity as NewsActivity).viewModel
         // set up rv
         setUpRecyclerView()
+        searchAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("article", it)
+            }
+            findNavController().navigate(R.id.action_searchNewsFragment_to_articleFragment, bundle)
+        }
         // listen on every text type on search bar
         var job: Job? = null
         mBinding?.etSearch?.addTextChangedListener {input ->

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sample.newsapp.R
 import com.sample.newsapp.adapters.NewsAdapter
@@ -31,7 +32,12 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
         viewModel = (activity as NewsActivity).viewModel
         // set up rv
         setUpRecyclerView()
-
+        newsAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("article", it)
+            }
+            findNavController().navigate(R.id.action_breakingNewsFragment_to_articleFragment, bundle)
+        }
         // observe on breaking news
         viewModel.breakingNews.observe(viewLifecycleOwner) { response ->
             when (response) {

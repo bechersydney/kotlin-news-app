@@ -1,4 +1,4 @@
-package com.sample.newsapp.data.db.entities
+package com.sample.newsapp.data.db.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -16,4 +16,4 @@ data class Article(
     val title: String,
     val url: String,
     val urlToImage: String
-)
+) : java.io.Serializable
