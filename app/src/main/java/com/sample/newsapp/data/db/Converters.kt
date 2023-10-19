@@ -6,8 +6,8 @@ import com.sample.newsapp.data.db.models.Source
 class Converters {
     // Source OBJECT
     @TypeConverter
-    fun fromSource(source: Source): String = source.name
+    fun fromSource(source: Source): String? = source.name
 
     @TypeConverter
-    fun toSource(name: String): Source = Source(name, name)
+    fun toSource(name: String?): Source = Source(name, name)
 }

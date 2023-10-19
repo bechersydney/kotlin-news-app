@@ -19,7 +19,7 @@ class NewsAdapter(
         fun setValue(article: Article) {
             Glide.with(binding.root).load(article.urlToImage).into(binding.ivArticleImage)
             binding.apply {
-                tvSource.text = article.source.name
+                tvSource.text = article.source?.name
                 tvTitle.text = article.title
                 tvDescription.text = article.description
                 tvPublishedAt.text = article.publishedAt
