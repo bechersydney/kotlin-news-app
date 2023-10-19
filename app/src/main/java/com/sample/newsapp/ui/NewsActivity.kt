@@ -23,7 +23,7 @@ class NewsActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         val repository = NewsRepository(ArticleDatabase(this))
-        val factory = NewsViewModelProviderFactory(repository)
+        val factory = NewsViewModelProviderFactory(application, repository)
         viewModel = ViewModelProvider(
             owner = this,
             factory = factory
