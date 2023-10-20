@@ -125,3 +125,9 @@ Q.idea/sonarlint/securityhotspotstore/0/9/0930516eb3e21c704ea16b41d0adfcfee8fcfa
 Q.idea/sonarlint/securityhotspotstore/7/d/7de8ca4a115b6365f10a5b39633b4235d1871e29,f/5/f5f8c015e7a454264126e05a67bb2e2cb58e80cf
 Å
 Q.idea/sonarlint/securityhotspotstore/e/8/e88ae8211f7d6661933396fd70753e500281e751,5/a/5a97fbabd53d207725c786602ba9295fb011c59a
+w
+G.idea/sonarlint/issuestore/3/3/33671100c68eeb189e61d371697ce05db36415a3,1/8/18af38781ad00558d094463ebf36b1795ea68914
+g
+7app/src/main/java/com/sample/newsapp/NewsApplication.kt,0/c/0c3e724d096efe0d4596e4874e304b2f3087089a
+w
+G.idea/sonarlint/issuestore/5/d/5da13b94d97d71dee3f8c6f3e41881258dea7f91,e/9/e9cc62049dc9bdccada610de37df8bcb8f59ad8c
